@@ -1,5 +1,3 @@
-import 'package:weather/domain/entities/weather_entity.dart';
-
 class RemoteWeatherModel {
   int? temp;
   String? conditionCode;
@@ -20,15 +18,6 @@ class RemoteWeatherModel {
         description: data['description'] as String?,
         cityName: data['city_name'] as String?,
       );
-
-  factory RemoteWeatherModel.fromEntity(WeatherEntity entity) {
-    return RemoteWeatherModel(
-      temp: entity.temp,
-      conditionCode: entity.conditionCode,
-      description: entity.description,
-      cityName: entity.cityName,
-    );
-  }
 
   @override
   String toString() {

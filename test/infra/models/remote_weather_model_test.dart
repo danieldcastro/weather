@@ -13,14 +13,6 @@ void main() {
       expect(remoteWeatherModel, WeatherMock.validRemoteWeatherModel);
     });
 
-    test('Should be return a converted entity', () {
-      final convertedEntity =
-          RemoteWeatherModel.fromEntity(WeatherMock.validWeatherEntity);
-
-      expect(convertedEntity, isA<RemoteWeatherModel>());
-      expect(convertedEntity, WeatherMock.validRemoteWeatherModel);
-    });
-
     test('Should be return toString', () {
       final remoteWeatherModel =
           RemoteWeatherModel.fromJson(WeatherMock.validWeatherJson);
