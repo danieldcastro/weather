@@ -1,5 +1,6 @@
 abstract class HttpService {
-  Future<HttpResponse> get(String url);
+  Future<HttpResponse> get(
+      {required String url, required Map<String, dynamic> queryParameters});
 }
 
 class HttpResponse {

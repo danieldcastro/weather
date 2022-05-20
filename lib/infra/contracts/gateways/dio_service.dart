@@ -11,8 +11,10 @@ class DioService implements HttpService {
   }
 
   @override
-  Future<HttpResponse> get(String url) async {
-    final response = await _client.get(url);
+  Future<HttpResponse> get(
+      {required String url,
+      required Map<String, dynamic> queryParameters}) async {
+    final response = await _client.get(url, queryParameters: queryParameters);
     _logs(
         method: 'GET',
         url: url,
