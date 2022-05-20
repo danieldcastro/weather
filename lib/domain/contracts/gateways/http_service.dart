@@ -1,0 +1,1 @@
+abstract class HttpService {}//TODO fazer o serviço

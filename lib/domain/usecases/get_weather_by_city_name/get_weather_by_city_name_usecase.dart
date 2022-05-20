@@ -1,0 +1,1 @@
+abstract class GetWeatherByCityNameUsecase {} //TODO fazer o usecase

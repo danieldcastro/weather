@@ -1,0 +1,1 @@
+abstract class GetWeatherRepository {} //TODO fazer o repositório
