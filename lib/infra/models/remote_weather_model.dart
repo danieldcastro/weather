@@ -1,4 +1,4 @@
-import 'dart:convert';
+import 'package:weather/domain/entities/weather_entity.dart';
 
 class RemoteWeatherModel {
   int? temp;
@@ -13,7 +13,7 @@ class RemoteWeatherModel {
     this.cityName,
   });
 
-  factory RemoteWeatherModel.fromMap(Map<String, dynamic> data) =>
+  factory RemoteWeatherModel.fromJson(Map<String, dynamic> data) =>
       RemoteWeatherModel(
         temp: data['temp'] as int?,
         conditionCode: data['condition_code'] as String?,
@@ -21,25 +21,7 @@ class RemoteWeatherModel {
         cityName: data['city_name'] as String?,
       );
 
-  Map<String, dynamic> toMap() => {
-        'temp': temp,
-        'condition_code': conditionCode,
-        'description': description,
-        'city_name': cityName,
-      };
-
-  String toJson() => json.encode(toMap());
-
-  factory RemoteWeatherModel.clear() {
-    return RemoteWeatherModel(
-      temp: 0,
-      conditionCode: '',
-      description: '',
-      cityName: '',
-    );
-  }
-
-  factory RemoteWeatherModel.fromEntity(RemoteWeatherModel entity) {
+  factory RemoteWeatherModel.fromEntity(WeatherEntity entity) {
     return RemoteWeatherModel(
       temp: entity.temp,
       conditionCode: entity.conditionCode,

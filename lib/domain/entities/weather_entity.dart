@@ -22,26 +22,10 @@ class WeatherEntity {
     );
   }
 
-  factory WeatherEntity.empty() {
-    return WeatherEntity(
-      temp: 0,
-      conditionCode: '',
-      description: '',
-      cityName: '',
-    );
-  }
-
   @override
   String toString() {
     return 'WeatherEntity(temp: $temp, conditionCode: $conditionCode, description: $description, cityName: $cityName)';
   }
-
-  List<Object?> get props => [
-        temp,
-        conditionCode,
-        description,
-        cityName,
-      ];
 
   @override
   bool operator ==(Object other) {
