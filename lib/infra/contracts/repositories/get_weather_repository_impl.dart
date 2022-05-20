@@ -18,10 +18,9 @@ class GetWeatherRepositoryImpl implements GetWeatherRepository {
     if (result.isLeft) {
       return Left(result.left);
     } else {
-      final weatherJsonToModel =
-          RemoteWeatherModel.fromEntity(result.right.data);
+      final weather = RemoteWeatherModel.fromJson(result.right.data);
 
-      final weatherModelToEntity = WeatherEntity.fromModel(weatherJsonToModel);
+      final weatherModelToEntity = WeatherEntity.fromModel(weather);
 
       return Right(weatherModelToEntity);
     }
