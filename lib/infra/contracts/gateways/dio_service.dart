@@ -6,6 +6,7 @@ import 'package:weather/domain/contracts/gateways/http_service.dart';
 class DioService implements HttpService {
   final _client = Dio();
 
+  @override
   Future<DioService> getInstance() async {
     return this;
   }
