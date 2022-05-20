@@ -37,4 +37,14 @@ class FailureRequest implements Exception {
   String toString() {
     return _message;
   }
+
+  @override
+  bool operator ==(Object other) {
+    if (identical(this, other)) return true;
+
+    return other is FailureRequest && other._message == _message;
+  }
+
+  @override
+  int get hashCode => _message.hashCode;
 }
