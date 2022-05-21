@@ -157,14 +157,15 @@ class SetWeatherDetails {
 
   static Color setBackColorByHour(DateTime dateTime) {
     int hour = dateTime.hour;
-    print(hour);
     if (hour <= 6) {
       return const Color(0xFF2d4545);
     } else if (hour <= 12) {
       return const Color(0xFF98b9e7);
-    } else if (hour <= 18) {
+    } else if (hour < 17) {
+      return const Color(0xFF345cbe);
+    } else if (hour <= 19) {
       return const Color(0xFFec6841);
-    } else if (hour > 18) {
+    } else if (hour > 19) {
       return const Color(0xFF665680);
     } else {
       return const Color(0xFF2d4545);
