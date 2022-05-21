@@ -5,12 +5,14 @@ class WeatherEntity {
   String? conditionCode;
   String? description;
   String? cityName;
+  DateTime? time;
 
   WeatherEntity({
     this.temp,
     this.conditionCode,
     this.description,
     this.cityName,
+    this.time,
   });
 
   factory WeatherEntity.fromModel(RemoteWeatherModel model) {
@@ -19,12 +21,13 @@ class WeatherEntity {
       conditionCode: model.conditionCode,
       description: model.description,
       cityName: model.cityName,
+      time: model.time,
     );
   }
 
   @override
   String toString() {
-    return 'WeatherEntity(temp: $temp, conditionCode: $conditionCode, description: $description, cityName: $cityName)';
+    return 'WeatherEntity(temp: $temp, conditionCode: $conditionCode, description: $description, cityName: $cityName, time: $time) ';
   }
 
   @override
@@ -35,7 +38,8 @@ class WeatherEntity {
         other.temp == temp &&
         other.conditionCode == conditionCode &&
         other.description == description &&
-        other.cityName == cityName;
+        other.cityName == cityName &&
+        other.time == time;
   }
 
   @override
@@ -43,6 +47,7 @@ class WeatherEntity {
     return temp.hashCode ^
         conditionCode.hashCode ^
         description.hashCode ^
-        cityName.hashCode;
+        cityName.hashCode ^
+        time.hashCode;
   }
 }

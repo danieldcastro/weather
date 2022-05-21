@@ -6,5 +6,5 @@ class DatasourceConstants {
   static const WEATHER_API_KEY = '52985fab';
 
   static const WEATHER_API_FIELDS =
-      'only_results, temp, description, condition_code, city_name';
+      'only_results, temp, description, condition_code, city_name, time';
 }

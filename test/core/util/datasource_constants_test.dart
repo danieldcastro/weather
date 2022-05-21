@@ -16,8 +16,8 @@ void main() {
 
     test('Should be return the string of the fields', () {
       const result = DatasourceConstants.WEATHER_API_FIELDS;
-      expect(
-          result, 'only_results, temp, description, condition_code, city_name');
+      expect(result,
+          'only_results, temp, description, condition_code, city_name, time');
     });
   });
 }
