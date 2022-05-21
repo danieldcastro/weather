@@ -52,7 +52,7 @@ import 'package:weather/core/util/Helpers/image_paths.dart';
 /// 48 - Serviço não disponível
 
 class SetWeatherDetails {
-  String setImageByConditionCode(String conditionCode) {
+  static String setImageByConditionCode(String conditionCode) {
     switch (int.parse(conditionCode)) {
       case 0:
         return PathImage.thunderstorm;
@@ -155,16 +155,17 @@ class SetWeatherDetails {
     }
   }
 
-  Color setBackColorByHour(DateTime dateTime) {
+  static Color setBackColorByHour(DateTime dateTime) {
     int hour = dateTime.hour;
-    if (hour >= 0) {
+    print(hour);
+    if (hour <= 6) {
       return const Color(0xFF2d4545);
-    } else if (hour >= 6) {
+    } else if (hour <= 12) {
       return const Color(0xFF98b9e7);
-    } else if (hour >= 12) {
-      return const Color(0xFFe6e6e6);
-    } else if (hour >= 18) {
+    } else if (hour <= 18) {
       return const Color(0xFFec6841);
+    } else if (hour > 18) {
+      return const Color(0xFF665680);
     } else {
       return const Color(0xFF2d4545);
     }
