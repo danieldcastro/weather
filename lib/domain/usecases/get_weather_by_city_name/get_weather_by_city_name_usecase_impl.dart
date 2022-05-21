@@ -6,7 +6,7 @@ import 'package:weather/domain/usecases/get_weather_by_city_name/get_weather_by_
 class GetWeatherByCityNameUsecaseImpl implements GetWeatherByCityNameUsecase {
   final GetWeatherRepository _repository;
 
-  GetWeatherByCityNameUsecaseImpl({required repository})
+  GetWeatherByCityNameUsecaseImpl({required GetWeatherRepository repository})
       : _repository = repository;
 
   @override
