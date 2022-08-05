@@ -1,1 +1,9 @@
-abstract class Datasource {} //TODO fazer a datasource
+import 'package:either_dart/either.dart';
+
+import '../../domain/contracts/gateways/http_service.dart';
+import '../errors/failure_request.dart';
+
+abstract class Datasource {
+  Future<Either<FailureRequest, HttpResponse>> getWeatherByCityName(
+      String cityName);
+}
