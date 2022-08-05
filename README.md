@@ -21,7 +21,7 @@ Um protótipo simples para visualizar a temperatura atual de todas as cidades do
  <a href="#ferramentas">Ferramentas</a> • 
  <a href="#plugins">Plugins</a> • 
  <a href="#o-que-o-app-é-capaz-de-fazer-crystal_ball">O que o app é capaz de fazer</a> • 
- <a href="#bora-dar-uma-clonada?-computer">Bora dar uma clonada?</a>
+ <a href="#bora-dar-uma-clonada-computer">Bora dar uma clonada?</a>
 </p>
 
 ----
